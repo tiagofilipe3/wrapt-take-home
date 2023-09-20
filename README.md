@@ -15,13 +15,13 @@ yarn install
 Then run the migrations to create the database tables:
 
 ```
-yarn rw data-migrate up
+yarn rw prisma migrate dev
 ```
 
 Then start the development server:
 
 ```
-yarn redwood dev
+yarn rw dev
 ```
 
 Your browser should automatically open to [http://localhost:8910](http://localhost:8910).
