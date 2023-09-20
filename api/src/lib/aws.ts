@@ -1,3 +1,5 @@
+import * as process from 'process'
+
 import {
   GetObjectCommand,
   HeadObjectCommand,
@@ -12,8 +14,8 @@ const REGION = 'sa-east-1'
 const s3Client = new S3Client({
   region: REGION,
   credentials: {
-    accessKeyId: 'AKIA3RBDHJY7AYZJXPIR',
-    secretAccessKey: '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',
+    accessKeyId: process.env.API_KEY,
+    secretAccessKey: process.env.API_SECRET,
   },
 }) as NodeJsClient<S3Client>
 
